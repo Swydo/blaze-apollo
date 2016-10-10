@@ -49,7 +49,7 @@ Directly copied from the awesome [GraphQL examples](http://graphql.org/learn/que
 
 ## Basic template example
 
-```html
+```handlebars
 <template name="human">
   <h1>{{human.name}}</h1>
   <p>The height of this human is {{human.height}} foot.</p>
@@ -95,7 +95,7 @@ Template.myTemplate.onCreated(function() {
 });
 ```
 ### Generic template helpers.
-```html
+```handlebars
 <template name="myTemplate">
   {{#if queriesReady}}
     <p>Loaded {{human.name}}</p>
