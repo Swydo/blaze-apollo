@@ -95,7 +95,7 @@ Template.myTemplate.onCreated(function() {
 });
 ```
 ### Generic template helpers.
-```
+```html
 <template name="myTemplate">
   {{#if queriesReady}}
     <p>Loaded {{human.name}}</p>
