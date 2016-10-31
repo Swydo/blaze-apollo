@@ -6,14 +6,25 @@ Package.describe({
   documentation: 'README.md'
 });
 
+var packages = [
+  'ecmascript',
+  'reactive-var',
+  'blaze-html-templates'
+];
+
 Package.onUse(function(api) {
   api.versionsFrom('1.3.2.4');
 
-  api.use([
-    'ecmascript',
-    'reactive-var',
-    'blaze-html-templates'
-  ], 'client');
+  api.use(packages, 'client');
 
   api.mainModule('client.js', 'client');
+});
+
+Package.onTest(function(api) {
+  api.use('swydo:blaze-apollo');
+
+  api.use(packages, 'client');
+  api.use(['practicalmeteor:mocha']);
+
+  api.mainModule('client.spec.js', 'client');
 });

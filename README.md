@@ -7,6 +7,10 @@ Blaze integration for the Apollo Client. Load GraphQL data directly in your temp
 meteor add swydo:blaze-apollo
 ```
 
+```
+meteor npm install --save apollo-client
+```
+
 ## Setup
 
 ```javascript
@@ -103,4 +107,11 @@ Template.myTemplate.onCreated(function() {
     <p>Loading...</p>
   {{/if}}
 </template>
+```
+
+## Testing
+This package uses `practicalmeteor:mocha` for testing:
+
+```
+meteor test-packages ./ --driver-package practicalmeteor:mocha
 ```
