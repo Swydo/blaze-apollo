@@ -9,6 +9,7 @@ Package.describe({
 var packages = [
   'ecmascript',
   'reactive-var',
+  'ejson',
   'blaze-html-templates'
 ];
 
@@ -24,7 +25,11 @@ Package.onTest(function(api) {
   api.use('swydo:blaze-apollo');
 
   api.use(packages, 'client');
-  api.use(['practicalmeteor:mocha']);
+  api.use([
+    'tracker',
+    'practicalmeteor:mocha',
+    'practicalmeteor:sinon'
+  ]);
 
   api.mainModule('client.spec.js', 'client');
 });
