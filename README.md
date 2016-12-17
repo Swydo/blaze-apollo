@@ -2,7 +2,6 @@
 Blaze integration for the Apollo Client. Load GraphQL data directly in your templates!
 
 ## Installation
-
 ```
 meteor add swydo:blaze-apollo
 ```
@@ -13,12 +12,24 @@ meteor npm install --save apollo-client
 
 ## Setup
 
+### Server
+Before using this package it's recommended to first setup you GraphQL server.
+You can use the [apollo](https://github.com/apollostack/meteor-integration) package, which uses express and HTTP requests. Or use [swydo:ddp-apollo](https://github.com/Swydo/ddp-apollo), which leverages your current DDP connection, without setting up an HTTP server. Installation instructions are in the README of those packages.
+
+### Client
 ```javascript
 import ApolloClient from 'apollo-client';
 import { setup } from 'meteor/swydo:blaze-apollo';
-import { meteorClientConfig } from 'meteor/apollo';
 
+// When using the meteor/apollo package:
+import { meteorClientConfig } from 'meteor/apollo';
 const client = new ApolloClient(meteorClientConfig());
+
+// When using meteor/swydo:ddp-apollo:
+import { DDPNetworkInterface } from 'meteor/swydo:ddp-apollo';
+const client = new ApolloClient ({
+  networkInterface: new DDPNetworkInterface({ connection: Meteor.connection })
+});
 
 setup({ client });
 ```
