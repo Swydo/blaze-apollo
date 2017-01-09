@@ -9,7 +9,6 @@ Package.describe({
 var packages = [
   'ecmascript',
   'reactive-var',
-  'ejson',
   'blaze-html-templates'
 ];
 
