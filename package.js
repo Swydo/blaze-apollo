@@ -1,18 +1,20 @@
+/* eslint-disable no-var, prefer-arrow-callback */
+var packages = [
+  'ecmascript',
+  'reactive-var',
+  'promise',
+  'blaze-html-templates',
+];
+
 Package.describe({
   name: 'swydo:blaze-apollo',
   version: '0.2.0',
   summary: 'Blaze integration for the Apollo Client',
   git: 'https://github.com/swydo/blaze-apollo',
-  documentation: 'README.md'
+  documentation: 'README.md',
 });
 
-var packages = [
-  'ecmascript',
-  'reactive-var',
-  'blaze-html-templates'
-];
-
-Package.onUse(function(api) {
+Package.onUse(function use(api) {
   api.versionsFrom('1.3.2.4');
 
   api.use(packages, 'client');
@@ -20,14 +22,14 @@ Package.onUse(function(api) {
   api.mainModule('client.js', 'client');
 });
 
-Package.onTest(function(api) {
+Package.onTest(function test(api) {
   api.use('swydo:blaze-apollo');
 
   api.use(packages, 'client');
   api.use([
     'tracker',
     'practicalmeteor:mocha',
-    'practicalmeteor:sinon'
+    'practicalmeteor:sinon',
   ]);
 
   api.mainModule('client.spec.js', 'client');
