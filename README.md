@@ -1,6 +1,8 @@
 # BlazeApollo
 Blaze integration for the Apollo Client. Load GraphQL data directly in your templates!
 
+[![Build Status](https://travis-ci.org/Swydo/blaze-apollo.svg?branch=master)](https://travis-ci.org/Swydo/blaze-apollo)
+
 ## Installation
 ```
 meteor add swydo:blaze-apollo
