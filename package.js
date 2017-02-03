@@ -8,7 +8,7 @@ var packages = [
 
 Package.describe({
   name: 'swydo:blaze-apollo',
-  version: '0.2.0',
+  version: '0.3.0',
   summary: 'Blaze integration for the Apollo Client',
   git: 'https://github.com/swydo/blaze-apollo',
   documentation: 'README.md',
