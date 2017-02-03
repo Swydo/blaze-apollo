@@ -13,7 +13,8 @@
   },
   "scripts": {
     "eslint": "eslint ./lib",
-    "test": "meteor test-packages ./ --driver-package practicalmeteor:mocha"
+    "test": "meteor test-packages ./ --once --driver-package dispatch:mocha-phantomjs",
+    "test-watch": "meteor test-packages ./ --driver-package practicalmeteor:mocha"
   },
   "repository": {
     "type": "git",

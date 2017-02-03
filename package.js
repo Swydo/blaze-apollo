@@ -30,6 +30,7 @@ Package.onTest(function test(api) {
     'tracker',
     'practicalmeteor:mocha',
     'practicalmeteor:sinon',
+    'dispatch:mocha-phantomjs',
   ]);
 
   api.mainModule('client.spec.js', 'client');
