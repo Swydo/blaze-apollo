@@ -6,4 +6,6 @@ before_install:
   - "curl https://install.meteor.com | /bin/sh"
   - export PATH="$HOME/.meteor:$PATH"
 
-script: "npm test -s"
+script:
+  - "npm run eslint -s"
+  - "npm test -s"
