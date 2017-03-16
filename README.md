@@ -96,7 +96,7 @@ Template.human.onCreated(function () {
 ```
 
 ## GraphQL Subscriptions
-This packages works with any Apollo Client that has subscriptions setup. No special setup required.
+This packages works with any Apollo Client that has subscriptions available. No special setup required.
 
 ```javascript
 Template.human.onCreated(function () {
@@ -105,6 +105,8 @@ Template.human.onCreated(function () {
   });
 });
 ```
+
+GraphQL subscribtions initiated with `gqlSubscribe` will automatically be unsubscribed when the template is destroyed!
 
 ## Deep dive into the API
 The example above is great for a quick setup, but sometimes you need more control. We can do that by catching the result of the query. This gives us a `Result` variable with a reactive `get()` method, just like any ReactiveVar:
