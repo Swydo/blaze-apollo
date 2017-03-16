@@ -16,7 +16,7 @@ meteor npm install --save apollo-client
 
 ### Server
 Before using this package it's recommended to first setup you GraphQL server.
-You can use the [apollo](https://github.com/apollostack/meteor-integration) package, which uses express and HTTP requests. Or use [swydo:ddp-apollo](https://github.com/Swydo/ddp-apollo), which leverages your current DDP connection, without setting up an HTTP server. Installation instructions are in the README of those packages.
+You can use the [apollo](https://github.com/apollostack/meteor-integration) package, which uses express and HTTP requests. Or use [swydo:ddp-apollo](https://github.com/Swydo/ddp-apollo), which leverages your current DDP connection, without setting up an HTTP server. `ddp-apollo` also give you subscriptions out of the box! Installation instructions are in the README of those packages.
 
 ### Client
 ```javascript
@@ -64,7 +64,7 @@ The result will look like this:
 ```
 Directly copied from the awesome [GraphQL examples](http://graphql.org/learn/queries/).
 
-## Basic template example
+## GraphQL Queries
 
 ```handlebars
 <template name="human">
@@ -85,6 +85,26 @@ Template.human.helpers({
 And done! GraphQL data in your templates!
 
 Besides `query`, all other options for [ApolloClient.watchQuery](http://dev.apollodata.com/core/apollo-client-api.html#ApolloClient.watchQuery) are available. Like `pollInterval`, `forceFetch`, `noFetch` and `variables`.
+
+## GraphQL Mutations
+```javascript
+Template.human.onCreated(function () {
+  this.gqlMutate({
+    query: HUMAN_MUTATION_QUERY
+  });
+});
+```
+
+## GraphQL Subscriptions
+This packages works with any Apollo Client that has subscriptions setup. No special setup required.
+
+```javascript
+Template.human.onCreated(function () {
+  this.gqlSubscribe({
+    query: HUMAN_SUBSCRIPTION_QUERY
+  });
+});
+```
 
 ## Deep dive into the API
 The example above is great for a quick setup, but sometimes you need more control. We can do that by catching the result of the query. This gives us a `Result` variable with a reactive `get()` method, just like any ReactiveVar:
