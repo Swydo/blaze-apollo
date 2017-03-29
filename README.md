@@ -30,7 +30,7 @@ const client = new ApolloClient(meteorClientConfig());
 // When using meteor/swydo:ddp-apollo:
 import { DDPNetworkInterface } from 'meteor/swydo:ddp-apollo';
 const client = new ApolloClient ({
-  networkInterface: new DDPNetworkInterface({ connection: Meteor.connection })
+  networkInterface: new DDPNetworkInterface()
 });
 
 setup({ client });
@@ -39,20 +39,16 @@ setup({ client });
 ## Something to query.
 For the examples below we'll use the following data:
 
-```javascript
-import gql from 'graphql-tag';
-
-const HUMAN_QUERY = gql`
+```graphql
 {
   human(id: "1000") {
     name
     height(unit: FOOT)
   }
 }
-`;
 ```
 The result will look like this:
-```javascript
+```json
 {
   "data": {
     "human": {
@@ -75,6 +71,7 @@ Directly copied from the awesome [GraphQL examples](http://graphql.org/learn/que
 
 ```javascript
 import './human.html';
+import HUMAN_QUERY from './humanQuery.graphql';
 
 Template.human.helpers({
   human() {
