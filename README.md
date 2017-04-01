@@ -1,4 +1,6 @@
 # BlazeApollo
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/Swydo/blaze-apollo.svg)](https://greenkeeper.io/)
 Blaze integration for the Apollo Client. Load GraphQL data directly in your templates!
 
 [![Build Status](https://travis-ci.org/Swydo/blaze-apollo.svg?branch=master)](https://travis-ci.org/Swydo/blaze-apollo)
