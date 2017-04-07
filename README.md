@@ -11,7 +11,8 @@ meteor add swydo:blaze-apollo
 ```
 
 ```
-meteor npm install --save apollo-client
+meteor add apollo
+meteor npm install --save apollo-client graphql-server-express express graphql graphql-tools body-parser
 ```
 
 ## Setup
