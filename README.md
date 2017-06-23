@@ -5,6 +5,26 @@ Blaze integration for the Apollo Client. Load GraphQL data directly in your temp
 [![Build Status](https://travis-ci.org/Swydo/blaze-apollo.svg?branch=master)](https://travis-ci.org/Swydo/blaze-apollo)
 [![Greenkeeper badge](https://badges.greenkeeper.io/Swydo/blaze-apollo.svg)](https://greenkeeper.io/)
 
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**
+
+- [Installation](#installation)
+- [Setup](#setup)
+  - [Server](#server)
+  - [Client](#client)
+- [Something to query.](#something-to-query)
+- [GraphQL Queries](#graphql-queries)
+- [GraphQL Mutations](#graphql-mutations)
+- [GraphQL Subscriptions](#graphql-subscriptions)
+- [Deep dive into the API](#deep-dive-into-the-api)
+- [Generic template helpers.](#generic-template-helpers)
+- [Testing](#testing)
+- [Sponsor](#sponsor)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+
 ## Installation
 ```
 meteor add swydo:blaze-apollo
@@ -132,7 +152,7 @@ Template.myTemplate.onCreated(function() {
   result.observer.setVariables({});
 });
 ```
-### Generic template helpers.
+## Generic template helpers.
 ```handlebars
 <template name="myTemplate">
   {{#if queriesReady}}
@@ -149,3 +169,8 @@ This package uses `practicalmeteor:mocha` for testing:
 ```
 meteor test-packages ./ --driver-package practicalmeteor:mocha
 ```
+
+## Sponsor
+[![Swydo](http://assets.swydo.com/img/s-wydo-logo.228x100.png)](https://swy.do)
+
+Want to work with Meteor and GraphQL? [Join the team!](https://swy.do/jobs)
