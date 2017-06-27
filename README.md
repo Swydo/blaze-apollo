@@ -13,12 +13,12 @@ Blaze integration for the Apollo Client. Load GraphQL data directly in your temp
 - [Setup](#setup)
   - [Server](#server)
   - [Client](#client)
-- [Something to query.](#something-to-query)
+- [Something to query](#something-to-query)
 - [GraphQL Queries](#graphql-queries)
 - [GraphQL Mutations](#graphql-mutations)
 - [GraphQL Subscriptions](#graphql-subscriptions)
 - [Deep dive into the API](#deep-dive-into-the-api)
-- [Generic template helpers.](#generic-template-helpers)
+- [Generic template helpers](#generic-template-helpers)
 - [Testing](#testing)
 - [Sponsor](#sponsor)
 
@@ -58,7 +58,7 @@ const client = new ApolloClient ({
 setup({ client });
 ```
 
-## Something to query.
+## Something to query
 For the examples below we'll use the following data:
 
 ```graphql
@@ -150,9 +150,13 @@ Template.myTemplate.onCreated(function() {
   // You might need some control over the observer
   // It's simply available on the result
   result.observer.setVariables({});
+  
+  // Detect if a result is loaded for the first time
+  // This is also reactive
+  result.isReady();
 });
 ```
-## Generic template helpers.
+## Generic template helpers
 ```handlebars
 <template name="myTemplate">
   {{#if queriesReady}}
