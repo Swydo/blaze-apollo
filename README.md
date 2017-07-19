@@ -17,7 +17,7 @@ Blaze integration for the Apollo Client. Load GraphQL data directly in your temp
 - [GraphQL Queries](#graphql-queries)
 - [GraphQL Mutations](#graphql-mutations)
 - [GraphQL Subscriptions](#graphql-subscriptions)
-- [Deep dive into the API](#deep-dive-into-the-api)
+- [General API](#general-api)
 - [Generic template helpers](#generic-template-helpers)
 - [Testing](#testing)
 - [Sponsor](#sponsor)
@@ -75,7 +75,7 @@ The result will look like this:
   "data": {
     "human": {
       "name": "Luke Skywalker",
-      "height": 5.6430448
+      "height": 5.643
     }
   }
 }
@@ -127,8 +127,8 @@ Template.human.onCreated(function () {
 
 GraphQL subscribtions initiated with `gqlSubscribe` will automatically be unsubscribed when the template is destroyed!
 
-## Deep dive into the API
-The example above is great for a quick setup, but sometimes you need more control. We can do that by catching the result of the query. This gives us a `Result` variable with a reactive `get()` method, just like any ReactiveVar:
+## General API
+The example above is great for a quick setup, but sometimes you need more control. We can do that by catching the result of the query. This gives us a `ReactiveObserver` with a reactive `get()` method, just like any ReactiveVar:
 
 ```javascript
 Template.myTemplate.onCreated(function() {
@@ -147,12 +147,10 @@ Template.myTemplate.onCreated(function() {
   // Note: This is automatically done when the template is destroyed
   result.unsubscribe();
 
-  // You might need some control over the observer
-  // It's simply available on the result
+  // Acess the original observer directly via the result
   result.observer.setVariables({});
-  
-  // Detect if a result is loaded for the first time
-  // This is also reactive
+
+  // Detect if a result is loaded for the first time, reactively
   result.isReady();
 });
 ```
