@@ -4,6 +4,7 @@ Blaze integration for the Apollo Client. Load GraphQL data directly in your temp
 
 [![Build Status](https://travis-ci.org/Swydo/blaze-apollo.svg?branch=master)](https://travis-ci.org/Swydo/blaze-apollo)
 [![Greenkeeper badge](https://badges.greenkeeper.io/Swydo/blaze-apollo.svg)](https://greenkeeper.io/)
+[![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
