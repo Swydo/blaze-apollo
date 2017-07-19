@@ -1,2 +1,2 @@
-import './lib/ReactiveObserver.spec';
-import './lib/setup.spec';
+import './specs/ReactiveObserver.spec';
+import './specs/setup.spec';

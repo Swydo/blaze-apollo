@@ -1,7 +1,7 @@
 /* eslint-disable prefer-arrow-callback, func-names */
 /* eslint-env mocha */
 import { chai } from 'meteor/practicalmeteor:chai';
-import { setup, breakdown } from './setup';
+import { setup, breakdown } from '../lib/setup';
 
 const { TemplateInstance } = Blaze;
 

@@ -5,7 +5,7 @@ import { sinon } from 'meteor/practicalmeteor:sinon';
 import { Promise } from 'meteor/promise';
 import { Tracker } from 'meteor/tracker';
 
-import { ReactiveObserver } from './ReactiveObserver';
+import { ReactiveObserver } from '../lib/ReactiveObserver';
 
 describe('ReactiveObserver', function () {
   it('should subscribe', (done) => {
