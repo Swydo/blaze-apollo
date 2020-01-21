@@ -11,7 +11,7 @@
     "eslint-config-airbnb-base": "^11.0.1",
     "eslint-import-resolver-meteor": "^0.4.0",
     "eslint-plugin-import": "^2.2.0",
-    "standard-version": "^7.0.0"
+    "standard-version": "^7.1.0"
   },
   "scripts": {
     "doctoc": "doctoc ./README.md",
