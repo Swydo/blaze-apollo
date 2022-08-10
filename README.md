@@ -6,6 +6,8 @@ Blaze integration for the Apollo Client. Load GraphQL data directly in your temp
 [![Greenkeeper badge](https://badges.greenkeeper.io/Swydo/blaze-apollo.svg)](https://greenkeeper.io/)
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
 
+<img width="830" alt="Github Header" src="https://user-images.githubusercontent.com/2283434/183906965-4d07a08e-81a7-4960-980d-768dcc188562.png">
+
 _As you might have noticed, Blaze-Apollo isn't actively maintained/developed, because we're moving to React ourselves. Blaze is great, but has a lot of quirks. We have more trust in React for future development and projects. If we can fix things with reasonable investment, we will, but Blaze-Apollo will stay mostly "as is". Thanks._
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
@@ -176,6 +178,5 @@ meteor test-packages ./ --driver-package practicalmeteor:mocha
 ```
 
 ## Sponsor
-[![Swydo](http://assets.swydo.com/img/s-wydo-logo.228x100.png)](https://swy.do)
 
 Want to work with Meteor and GraphQL? [Join the team!](https://swy.do/jobs)
